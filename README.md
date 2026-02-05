@@ -1,106 +1,96 @@
-﻿# Ecommerce-Microservices-Platform
-A Java-based e-commerce backend system built using Spring Boot microservices, following industry-standard patterns such as service discovery, centralized configuration, API gateway routing, and event-driven communication.
+# **E-Commerce Microservices Platform**
 
-This project demonstrates real-world backend engineering concepts and is designed to be extensible for cloud and container deployments in the future.
+A **Java-based e-commerce backend system** built using **Spring Boot microservices**, following industry-standard patterns such as **service discovery**, **centralized configuration**, **API gateway routing**, and **event-driven communication**.
 
-🚀 Tech Stack
-Backend
+---
 
-Java 17
+## **1️⃣ Tech Stack**
 
-Spring Boot
+### **Backend**
+- **Java 17**
+- **Spring Boot**
+- **Spring Cloud** (Eureka, Config Server, API Gateway)
+- **Spring Security**
+- **REST APIs**
 
-Spring Cloud (Eureka, Config Server, API Gateway)
+### **Messaging**
+- **Apache Kafka**
+- **RabbitMQ**
 
-Spring Security
+### **Database**
+- **MySQL / PostgreSQL / MongoDB**
 
-RESTful APIs
+---
 
-Messaging
+## **2️⃣ Microservices Overview**
 
-Apache Kafka
+1. **User Service** – User registration and authentication  
+2. **Product Service** – Product catalog management  
+3. **Order Service** – Order processing and lifecycle  
+4. **Notification Service** – Event-driven notifications  
+5. **API Gateway** – Central entry point and routing  
+6. **Config Server** – Centralized configuration  
+7. **Eureka Server** – Service discovery  
 
-RabbitMQ
+---
 
-Database
+## **3️⃣ Architecture Overview**
 
-MySQL / PostgreSQL (service-level databases)
+- **Eureka Server** for service discovery  
+- **Spring Cloud Config Server** for centralized configuration  
+- **API Gateway** for routing and security  
+- **Kafka** for event-driven workflows  
+- **RabbitMQ** for asynchronous processing  
 
-Build & Tools
+---
 
-Maven
+## **4️⃣ Security**
 
-Git & GitHub
+- **Spring Security** integration  
+- **Stateless authentication** design  
+- **Role-based access control (RBAC)**  
+- Secure APIs via gateway  
 
-IntelliJ IDEA
+---
 
-🧩 Microservices Overview
-Service	Description
-User Service	User registration and authentication
-Product Service	Product catalog management
-Order Service	Order processing and order lifecycle
-Notification Service	Event-driven notifications
-API Gateway	Central entry point and routing
-Config Server	Centralized configuration
-Service Registry (Eureka)	Service discovery
+## **5️⃣ How to Run Locally**
 
-Each service is independently developed and deployed and communicates via REST APIs and messaging systems.
+### **Prerequisites**
+- Java 17  
+- Maven  
+- MySQL / PostgreSQL  
+- Kafka & RabbitMQ  
 
-🏗 Architecture Overview
+### **Steps**
+1. Clone the repository
+   ```bash
+   git clone https://github.com/kajal2328/Ecommerce-Microservices-Platform.git
+   ```
+2. Navigate to the project
+   ```bash
+   cd Ecommerce-Microservices-Platform
+   ```
 
-Microservices registered with Eureka Server
+---
 
-Centralized configuration using Spring Cloud Config Server
+### **Start services in the following order:**
 
-External requests routed through Spring Cloud API Gateway
+- Config Server
+- Eureka Server
+- API Gateway
+- Other microservices (User, Product, Order, Notification)
 
-Secure APIs using Spring Security
+### **Access services**
 
-Kafka used for event-driven workflows
+- All client requests go through the API Gateway
+- Services register automatically with Eureka Server
 
-RabbitMQ used for asynchronous processing
+---
 
-This architecture reflects real-world microservices design principles used in production systems.
+## **6️⃣ Project Structure**
 
-🔐 Security
-
-Spring Security integration
-
-Stateless authentication design
-
-Role-based access control (RBAC)
-
-Secure API access via gateway
-
-⚙️ How to Run Locally
-Prerequisites
-
-Java 17
-
-Maven
-
-MySQL / PostgreSQL
-
-Kafka & RabbitMQ running locally
-
-Steps
-git clone https://github.com/kajal2328/Ecommerce-Microservices-Platform.git
-cd Ecommerce-Microservices-Platform
-
-
-Start services in the following order:
-
-Config Server
-
-Eureka Server
-
-API Gateway
-
-Other microservices (User, Product, Order, Notification)
-
-📂 Project Structure
+```text
 Ecommerce-Microservices-Platform
-│
 ├── Notification/
 ├── Order/
 ├── Product/
@@ -109,35 +99,14 @@ Ecommerce-Microservices-Platform
 ├── configserver/
 ├── eureka/
 └── README.md
+```
+---
 
-🧠 Key Concepts Demonstrated
+## **7️⃣ Future Enhancements**
 
-Microservices architecture
+* **Docker & Docker Compose**
+* **Kubernetes deployment**
+* **Azure cloud deployment**
+* **CI/CD pipelines**
 
-Service discovery
 
-API Gateway pattern
-
-Centralized configuration
-
-Event-driven communication
-
-Asynchronous messaging
-
-Secure backend development
-
-Clean code and modular design
-
-📌 Future Enhancements
-
-The project is structured to allow easy future enhancements, such as:
-
-Docker & Docker Compose
-
-Kubernetes deployment
-
-Azure cloud deployment (AKS)
-
-CI/CD pipelines
-
-Centralized logging and monitoring
