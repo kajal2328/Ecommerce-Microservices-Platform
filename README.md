@@ -109,4 +109,24 @@ Ecommerce-Microservices-Platform
 * **Azure cloud deployment**
 * **CI/CD pipelines**
 
+---
+
+## **Key Features**
+
+- Microservices-based architecture using Spring Boot
+- Service discovery with Eureka Server
+- Centralized configuration using Spring Cloud Config
+- API Gateway for routing and security
+- Event-driven communication using Kafka
+- Asynchronous messaging using RabbitMQ
+- Secure APIs with Spring Security
+- Scalable and loosely coupled services
+
+---
+
+## **API Documentation**
+
+API endpoints are exposed via REST controllers in each microservice.
+Swagger integration can be added for interactive API documentation.
+
 
