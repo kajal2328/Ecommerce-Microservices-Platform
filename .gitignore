@@ -1,0 +1,15 @@
+# IntelliJ
+.idea/
+*.iml
+
+# Java
+target/
+*.log
+
+# Environment
+.env
+application-*.yml
+application-*.properties
+
+# OS
+.DS_Store

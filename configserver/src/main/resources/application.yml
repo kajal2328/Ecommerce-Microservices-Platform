@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: config-server
+
+
+  profiles:
+    active: native
+
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:///C:\Users\kajal.tomar\OneDrive - Accenture\Desktop\Full Stack projects\E-Commerce_Microservices\Backend\ecom_microservices_faulttolerance\configserver\src\main\resources\config
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+
+
+
+  main:
+    banner-mode: off
+
+
+server:
+  port: 9999
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

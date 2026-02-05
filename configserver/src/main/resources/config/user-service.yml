@@ -1,0 +1,37 @@
+server:
+  port: 8082
+
+#Turn off the spring boot banner
+spring:
+  main:
+  banner-mode: off
+
+  mongodb.uri: ${MONGO_URL}
+  mongodb.database: Userdb
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+    register-with-eureka: true
+    fetch-registry: true
+
+  instance:
+    prefer-ip-address: true
+
+
+#  instance:
+#    hostname: localhost
